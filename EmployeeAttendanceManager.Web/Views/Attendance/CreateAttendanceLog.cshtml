@@ -1,0 +1,164 @@
+﻿@using EmployeeAttendanceManager.Web.RootAssets
+@model EmployeeAttendanceManager.Model.ViewModels.AddAttendanceLogViewModel
+@{
+    /**/
+
+    ViewBag.Title = "CreateAttendanceLog";
+}
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 {
+        width: 100%;
+        background-color: #f9d9d6;
+    }
+</style>
+<h2 style="text-align: center">Attendance Log</h2>
+<script>
+
+    if (typeof (controllerData) == "undefined") {
+        var controllerData = {};
+    }
+    controllerData.AttendanceModel ={
+
+        AttendanceList:@Html.Raw(new JsonSerializationProcessor().Serialize(Model.AttendanceLog)),
+        StatusList:@Html.Raw(new JsonSerializationProcessor().Serialize(Model.Statuses)),
+
+        ServerResponse: null,
+        ServerSuccess: false,
+        MainAttendDateToUse:null
+
+
+    }
+
+
+</script>
+<div>
+    <md-content style="text-align: center" ng-app="app" ng-controller="AddAttendanceLogCtrl">
+
+
+        <div style="margin-left: 10%; margin-right: 10%" class="panel panel-default">
+            Use this form to submit today register
+            
+            <form style="margin-top: 5%; margin-bottom: 5%" ng-submit="AddAttendanceLog()">
+                
+                <div style="width: 10%;margin-left: 44%;">
+                    <button type="submit" class="">Submit Register</button>
+
+                </div>
+                <div style="margin-top: 5px"> Quick Links  <button type="button" ng-click="Settoday()">Set Date to today</button> <button type="button" ng-click="SetPresent()">Set everyone to present</button></div>
+                
+                <md-content style="width: 58%;display: inline;" layout-padding="" layout-margin="" class="datepickerdemoMomentCustomFormat">
+                    <md-datepicker ng-model="MainAttendDateToUse" ng-change="AddAttendanceLogCtrl.onDateChanged()" md-placeholder="Enter date"></md-datepicker>
+                    Date: {{c.DateAttended | date:shortDate}}
+                </md-content>
+                <button type="button" ng-click="UpdateDate()">Update All Dates</button>
+
+                <div ng-if="ServerSuccess === true" style="color: green; font-size: larger; font-weight: bold;">{{ServerResponse}}</div>
+                <div ng-if="ServerSuccess === false" style="color: red; font-size: larger; font-weight: bold;">{{ServerResponse}}</div>
+                <div style="" class="panel-body">
+
+
+                    <table style="width: 98%; margin-bottom: 3%">
+
+                        <tbody>
+                        @*<tr style="line-height: 154%; background-color: darksalmon">
+                            <td>Employee Name</td>
+                            <td>Status</td>
+                        </tr>*@
+
+                        <tr ng-repeat="c in AttendanceList">
+                            <td style="text-align: center;font-size: x-large; font-weight: bold; background-color: lightgoldenrodyellow">
+                                {{c.EmployeeName}}
+                            </td>
+                            <td style="margin-bottom: 5%">
+
+                                <div style="margin-left: 5%" class="">
+                                    <div style="margin-top: 2%;" class="">
+                                        <label class="">Employee</label>
+                                        <div style="display: inline;" class="">
+
+                                            @*<select style="display: inline; width: 50%" id="StatusListing" ng-model="c.SelectedStatus" class="form-control">
+                                                <option ng-repeat="x in StatusList" value="{{x.AttendanceStatusId}}">{{x.AttendanceStatusLabel}}</option>
+                                            </select>*@
+                                            <select class="form-control" style="display: inline; width: 50%" id="StatusListing"  ng-model="c.SelectedStatus" ng-options="option.AttendanceStatusLabel for option in StatusList track by option.AttendanceStatusId"></select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label style="margin-left: 5%" class="">Attendance Date</label>
+
+
+                                @*<div style="width: 50%" class='input-group date' id='datetimepicker1'>
+                            <input  type='text' ng-model="c.DateAttendedAsString"  class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>*@
+                                @*<md-datepicker ng-model="c.DateAttended" md-placeholder="Enter date">  </md-datepicker>*@
+
+                                <md-content style="width: 58%;display: inline;" layout-padding="" layout-margin="" class="datepickerdemoMomentCustomFormat">
+                                    <md-datepicker ng-model="c.DateAttended" ng-change="AddAttendanceLogCtrl.onDateChanged()" md-placeholder="Enter date"></md-datepicker>
+                                    Date: {{c.DateAttended | date:shortDate}}
+                                </md-content>
+
+
+                                <button style="margin-bottom: 1%" type="button" ng-click="AddEmployeeAttendance()" class="">Submit for this Employee only</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+
+
+
+
+                </div>
+            </form>
+            
+
+        </div>
+        <div style="margin-left: 10%; margin-right: 10%" class="panel panel-default">
+
+
+
+
+        </div>
+
+    </md-content>
+</div>
+
+@section Scripts{
+<script src="~/RootAssets/BaseSiteTemplate/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript">
+        //$(function () {
+        //    $('#datetimepicker1').datetimepicker();
+        //   //$('#datetimepicker1').datepicker('hide');
+        //  //$('#datetimepicker1').datepicker('update');
+     
+
+        //});
+        //$('#datetimepicker1').datepicker()
+        //    .on('changeDate', function(ev){
+                
+        //    });
+
+      
+      
+    </script>
+    <script src="~/RootAssets/Js/AddAttendanceLog.js"></script>
+
+}
+

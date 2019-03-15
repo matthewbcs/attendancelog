@@ -1,0 +1,96 @@
+﻿@using EmployeeAttendanceManager.Web.RootAssets
+@model EmployeeAttendanceManager.Model.ViewModels.AddEmployeeViewModel
+@{
+    ViewBag.Title = "AddEmployee";
+}
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 {
+        width: 100%;
+        background-color: #f9d9d6;
+    }
+</style>
+<h2 style="text-align: center">Add a Employee</h2>
+<script>
+
+    if (typeof (controllerData) == "undefined") {
+        var controllerData = {};
+    }
+    controllerData.EmployeeMddel ={
+
+        EmployeeList:@Html.Raw(new JsonSerializationProcessor().Serialize(Model.Employees)),
+
+
+
+    }
+
+
+</script>
+<div >
+    <div style="text-align: center" ng-app="app" ng-controller="EmployeeCtrl">
+
+
+        <div class="panel panel-default" >
+            <form ng-submit="addEmployee()">
+                <div style="display: inline" class="panel-body">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">First Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="newEmployee.Firstname"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Last Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" ng-model="newEmployee.Surname"/>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="">Submit</button>
+
+                </div>
+            </form>
+        
+         </div>
+
+        <div style="margin-top: 10px" class="panel panel-default" >
+            <div style="width: 50%;" class="panel-body">
+                <b style="text-align: center; margin-left: 100%;"> Employee Listing</b>
+                <table style="margin-left: 50%;" id="t01">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Id</th>
+                    </tr>
+                    <tr ng-repeat="x in EmployeeList">
+                        <td>{{x.Firstname}}</td>
+                        <td>{{x.Surname}}</td>
+                        <td>{{x.EmployeeId}}</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+
+
+    <script src="~/RootAssets/Js/AddEmployee.js"></script>
+
+}
+

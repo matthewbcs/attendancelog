@@ -1,0 +1,56 @@
+﻿@using EmployeeAttendanceManager.Web.RootAssets
+@model EmployeeAttendanceManager.Model.ViewModels.AnnualLeaveCalenderViewModel
+@{
+    ViewBag.Title = "Calender";
+}
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 {
+        width: 100%;
+        background-color: #f9d9d6;
+    }
+</style>
+<h2 style="text-align: center">Calender</h2>
+<script>
+
+    if (typeof (controllerData) == "undefined") {
+        var controllerData = {};
+    }
+    controllerData.CalenderModel ={
+
+        AnnualLeaveListing:@Html.Raw(new JsonSerializationProcessor().Serialize(Model.EmployeeAnnualLeaveForCalender)),
+
+    }
+
+
+</script>
+<div>
+    <div style="text-align: center" ng-app="app" ng-controller="CalenderCtrl">
+
+
+        <div style="margin-top: 10px" class="panel panel-default">
+            <div style="width: 90%;" class="panel-body">
+                <div id="calendar"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+
+
+    <script src="~/RootAssets/Js/AnnualLeaveCalender.js"></script>
+
+}
+

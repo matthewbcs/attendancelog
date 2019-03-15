@@ -1,0 +1,130 @@
+﻿@using EmployeeAttendanceManager.Web.RootAssets
+@model EmployeeAttendanceManager.Model.ViewModels.AddAnnualLeaveViewModel
+@{
+    ViewBag.Title = "AddAnnualLeave";
+}
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+
+    table#t01 {
+        width: 100%;
+        background-color: #f9d9d6;
+    }
+</style>
+<h2 style="text-align: center">Book Annual Leave</h2>
+<script>
+
+    if (typeof (controllerData) == "undefined") {
+        var controllerData = {};
+    }
+    controllerData.AnnualLeaveModel ={
+
+        EmployeeList:@Html.Raw(new JsonSerializationProcessor().Serialize(Model.Employees)),
+        AnnualLeaveListing:@Html.Raw(new JsonSerializationProcessor().Serialize(Model.AnnualLeaveData)),
+        ServerResponse: null,
+        ServerSuccess: false,
+        AvaliablityResponse: null
+
+    }
+
+
+</script>
+<div>
+    <div style="text-align: center" ng-app="app" ng-controller="AnnualLeaveCtrl">
+
+
+        <div style="margin-left: 10%; margin-right: 10%" class="panel panel-default">
+            <form style="margin-top: 5%; margin-bottom: 5%" ng-submit="addAnnualLeave()">
+                <div style="display: inline-flex;" class="panel-body">
+                    Use this form to booked annual leave if annual leave is already booked within that date range you will have to book it separate
+                    <div style="width: 67%" class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Employee</label>
+                            <div class="col-sm-9">
+
+                                <select style="display: inline;" id="EmployeeListing" ng-model="addAnnualLeave.SelectedEmployee" class="form-control">
+                                    <option ng-repeat="x in EmployeeList" value="{{x.EmployeeId}}">{{x.Firstname}} {{x.Surname}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="width: 60%;" class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">From Date</label>
+                            <div class="col-sm-9">
+                                <input  type="Date" class="form-control" ng-model="addAnnualLeave.FromDate" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="width: 60%;" class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">To Date</label>
+                            <div class="col-sm-9">
+                                <input type="Date" class="form-control" ng-model="addAnnualLeave.ToDate" />
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: inline; width: 50% " ><button type="submit" class="">Submit</button>
+                        <button type="button" ng-click="CheckAvailability()">Check Availability</button></div>
+
+                </div>
+            </form>
+            <div ng-if="ServerSuccess === true" style="color: green; font-size: larger;font-weight: bold;">{{ServerResponse}}</div>
+            <div ng-if="ServerSuccess === false" style="color: red; font-size: larger;font-weight: bold;">{{ServerResponse}}</div>
+
+        </div>
+        <div style="margin-left: 10%; margin-right: 10%" class="panel panel-default">
+        
+
+            <div ng-if="AnnualLeaveListing.length > 0" style="">
+                <h4>Annual Leave Conflict</h4>
+                <table style="text-align: center;  margin-top: 3%; margin-bottom: 6%;margin-left: 20%;width: 57%;">
+
+                    <tbody>
+                    <tr style="background-color: bisque;">
+                        <td>Employee Name</td>
+                        <td>Date Booked</td>
+                        <td>Is Half Day</td>
+                    </tr>
+                    <tr style="" ng-repeat="c in AnnualLeaveListing">
+                        <td>{{c.EmployeeName}}</td>
+                        <td>{{c.AnnualLeaveDate | date:'medium'}}</td>
+                        <td>{{c.IsHalfDay}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>{{AvaliablityResponse}}</div>
+                @*<p>
+                        <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                        <br />
+                        <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                        <br />
+                        <i class="glyphicon glyphicon-gift"></i>June 02, 1988
+                    </p>*@
+                <!-- Split button -->
+                   
+        
+        </div>
+
+        </div>
+    </div>
+
+@section Scripts{
+
+
+    <script src="~/RootAssets/Js/AddAnnualLeave.js"></script>
+
+}
+
