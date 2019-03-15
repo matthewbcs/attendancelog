@@ -1,0 +1,17 @@
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Service.dll.config
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Service.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Service.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Model.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Repository.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EntityFramework.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Model.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Repository.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EmployeeAttendanceManager.Repository.dll.config
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EntityFramework.xml
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Debug\EmployeeAttendanceManager.Service.csprojAssemblyReference.cache
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Debug\EmployeeAttendanceManager.Service.csproj.CoreCompileInputs.cache
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Debug\EmployeeAttendanceManager.Service.csproj.CopyComplete
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Debug\EmployeeAttendanceManager.Service.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Debug\EmployeeAttendanceManager.Service.pdb

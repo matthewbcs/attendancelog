@@ -1,0 +1,110 @@
+﻿@using EmployeeAttendanceManager.Web.RootAssets
+@model EmployeeAttendanceManager.Model.ViewModels.AnnualLeaveViewModel
+@{
+    ViewBag.Title = "AnnualLeave";
+}
+
+<style>
+    body{padding-top:30px;}
+
+    .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+    small {
+        display: block;
+        line-height: 1.428571429;
+        color: #999;
+    }
+ 
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {background-color:#f5f5f5;}
+</style>
+<h2 style="text-align: center">Annual Leave Summary</h2>
+<script>
+
+    if (typeof (controllerData) == "undefined") {
+        var controllerData = {};
+    }
+    controllerData.AnnualLeaveViewModel ={
+
+        AnnualLeaveListing:@Html.Raw(new JsonSerializationProcessor().Serialize(Model.EmployeeAnnualLeaveListing)),
+
+
+
+    }
+
+
+</script>
+<div>
+    <div style="text-align: center" ng-app="app" ng-controller="AnnualLeaveViewCtrl">
+        
+
+
+        <div ng-repeat="x in AnnualLeaveListing" style="margin-left: 10%; margin-right: 10%" class="panel panel-default">
+           
+            
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <img style="width: 22%;margin-top: 10%; margin-bottom: 10%;margin-left: 15%;" src="http://profilepicturesdp.com/wp-content/uploads/2018/06/blank-profile-picture-google.jpg" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div style=" width: 32%" class="col-sm-6 col-md-8">
+                    <h4>
+                        {{x.EmployeeName}}
+                    </h4>
+                    <small>
+                        <cite title="annual leave">
+                            Booked Annual Leave Count {{x.AnnualLeaveData.Length}}
+
+                        </cite>
+                    </small>
+                    <div style="max-height: 157px;display: block;width: 98%; overflow-x: auto;" >
+                        <table style="">
+                           
+                            <tbody>
+                            <tr>
+                                <td>Date Booked</td>
+                                <td>Is Half Day</td>
+                            </tr>
+                            <tr ng-repeat="c in x.AnnualLeaveData">
+                                <td>{{c.AnnualLeaveDate | date:'medium'}}</td>
+                                <td>{{c.IsHalfDay}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    @*<p>
+                        <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                        <br />
+                        <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                        <br />
+                        <i class="glyphicon glyphicon-gift"></i>June 02, 1988
+                    </p>*@
+                    <!-- Split button -->
+                   
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+
+</div>
+
+@section Scripts{
+
+
+    <script src="~/RootAssets/Js/AnnualLeave.js"></script>
+
+}
+

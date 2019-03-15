@@ -1,0 +1,5 @@
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Model\bin\Release\EmployeeAttendanceManager.Model.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Model\bin\Release\EmployeeAttendanceManager.Model.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Model\obj\Release\EmployeeAttendanceManager.Model.csproj.CoreCompileInputs.cache
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Model\obj\Release\EmployeeAttendanceManager.Model.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Model\obj\Release\EmployeeAttendanceManager.Model.pdb

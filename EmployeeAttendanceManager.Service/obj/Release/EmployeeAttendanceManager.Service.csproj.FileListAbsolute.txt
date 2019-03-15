@@ -1,0 +1,17 @@
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Service.dll.config
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Service.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Service.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Model.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Repository.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EntityFramework.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EntityFramework.SqlServer.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Model.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Repository.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EmployeeAttendanceManager.Repository.dll.config
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EntityFramework.xml
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\bin\Release\EntityFramework.SqlServer.xml
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Release\EmployeeAttendanceManager.Service.csprojAssemblyReference.cache
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Release\EmployeeAttendanceManager.Service.csproj.CoreCompileInputs.cache
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Release\EmployeeAttendanceManager.Service.csproj.CopyComplete
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Release\EmployeeAttendanceManager.Service.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Service\obj\Release\EmployeeAttendanceManager.Service.pdb

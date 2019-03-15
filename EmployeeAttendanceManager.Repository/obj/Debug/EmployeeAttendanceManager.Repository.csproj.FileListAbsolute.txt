@@ -1,0 +1,14 @@
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EmployeeAttendanceManager.Repository.dll.config
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EmployeeAttendanceManager.Repository.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EmployeeAttendanceManager.Repository.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EmployeeAttendanceManager.Model.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EntityFramework.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EmployeeAttendanceManager.Model.pdb
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EntityFramework.xml
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\obj\Debug\EmployeeAttendanceManager.Repository.csprojAssemblyReference.cache
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\obj\Debug\EmployeeAttendanceManager.Repository.csproj.CoreCompileInputs.cache
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\obj\Debug\EmployeeAttendanceManager.Repository.csproj.CopyComplete
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\obj\Debug\EmployeeAttendanceManager.Repository.dll
+C:\Dev\EmployeeAttendanceApp\EmployeeAttendanceManager.Web\EmployeeAttendanceManager.Repository\obj\Debug\EmployeeAttendanceManager.Repository.pdb
